@@ -2,7 +2,7 @@ with source as (
  select * from {{ source('base_data','payments') }}
 ),
 
-with transformed as (
+transformed as (
   select
     id as payment_id
     ,ORDERID as order_id
