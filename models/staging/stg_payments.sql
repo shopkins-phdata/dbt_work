@@ -8,8 +8,8 @@ transformed as (
     ,ORDERID as order_id
     ,STATUS as payment_status
     ,PAYMENTMETHOD as payment_method
-    ,AMOUNT as order_amount
-    ,CREATED as created_date
+    ,round(amount /100,2) as payment_amount
+    ,CREATED as payment_created_at
   from source
 )
 
