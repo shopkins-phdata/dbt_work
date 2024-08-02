@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: base_data
+    database: SANDBOX
+    schema: SHOPKINS
+    tables:
+      - name: customers
+      - name: orders
+      - name: payments
