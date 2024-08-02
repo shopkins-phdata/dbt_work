@@ -4,7 +4,7 @@ with completed_payments as (
     order_id,
     max(payment_created_at) as payment_finalized_date,
     sum(payment_amount) as total_amount_paid
-  from {{ ref('stg_payments') }}
+  from {{ ref('stg_payments') }} payments
   where payment_status <> 'fail'
   group by 1
 
@@ -19,7 +19,7 @@ paid_orders as (
     orders.order_status,
     completed_payments.total_amount_paid,
     completed_payments.payment_finalized_date
-  from {{ ref('stg_orders') }}
+  from {{ ref('stg_orders') }} orders
  left join completed_payments on orders.order_id = completed_payments.order_id
 )
 
