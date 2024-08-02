@@ -1,5 +1,5 @@
 with source as (
- select * from from {{ source('base_data','customers') }}
+ select * from {{ source('base_data','customers') }}
 ),
 
 transformed as (
