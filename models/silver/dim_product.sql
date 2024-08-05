@@ -4,6 +4,18 @@
     )
 }}
 
+with prod as (
+  select * from {{ ref('stg_products') }} 
+)
+,
+cat as (
+  select * from {{ ref('stg_categories') }} 
+)
+,
+sup as (
+    {{ ref('dim_supplier') }} 
+)
+
 select 
  md5(productid) as dim_product_key
  , PRODUCTID
@@ -19,5 +31,6 @@ select
      when 1 then true
      else false
     end as is_discontinued
-from {{ ref('stg_products') }} prod
- left join {{ ref('stg_categories') }} cat on prod.categoryid = cat.categoryid
+from prod
+ left join cat on prod.categoryid = cat.categoryid
+ left join sup on prod.SUPPLIERID=sup.SUPPLIERID

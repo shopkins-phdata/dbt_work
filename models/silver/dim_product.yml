@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_product
+    columns:
+      - name: dim_product_key
+        tests:
+          - unique
+          - not_null
+      - name: PRODUCTID
+      - name: PRODUCTNAME
+      - name: CONTACTNAME
+      - name: CONTACTTITLE
+      - name: CITY
+      - name: REGION
+      - name: POSTALCODE
+      - name: COUNTRY
+      - name: PHONE
+      - name: FAX

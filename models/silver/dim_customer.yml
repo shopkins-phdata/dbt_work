@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_customer
+    columns:
+      - name: dim_customer_key
+        tests:
+          - unique
+          - not_null
+      - name: CUSTOMERID
+      - name: COMPANYNAME
+      - name: CONTACTNAME
+      - name: CONTACTTITLE
+      - name: CITY
+      - name: REGION
+      - name: POSTALCODE
+      - name: COUNTRY
+      - name: PHONE
+      - name: FAX
