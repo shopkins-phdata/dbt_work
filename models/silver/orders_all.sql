@@ -5,7 +5,7 @@ with
  ,
 
  order_details as (
-    select * from {{ ref('stg_order_details') }}
+    select * exclude (orderid) from {{ ref('stg_order_details') }}
  )
  ,
 
