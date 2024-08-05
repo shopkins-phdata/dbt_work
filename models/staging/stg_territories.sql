@@ -1,2 +1,2 @@
 select *
-feom {{ source('base_data', 'territories') }}
+from {{ source('base_data', 'territories') }}
