@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized = "table"
+    )
+}}
+
 select 
  md5(productid) as dim_product_key
  , PRODUCTID
