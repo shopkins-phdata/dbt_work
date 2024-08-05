@@ -13,7 +13,7 @@ cat as (
 )
 ,
 sup as (
-    {{ ref('dim_supplier') }} 
+  select * from {{ ref('dim_supplier') }} 
 )
 
 select 
