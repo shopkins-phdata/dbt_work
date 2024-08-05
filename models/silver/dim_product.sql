@@ -20,7 +20,7 @@ select
  md5(productid) as dim_product_key
  , PRODUCTID
  , PRODUCTNAME
- , SUPPLIERID
+ , sup.dim_supplier_key
  , cat.categoryname
  , QUANTITYPERUNIT
  , UNITPRICE
