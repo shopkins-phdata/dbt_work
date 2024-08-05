@@ -10,4 +10,4 @@ select
  , COUNTRY
  , PHONE
  , FAX
-from stg_customers
+from {{ ref('stg_customers') }}
