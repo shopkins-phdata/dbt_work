@@ -6,7 +6,7 @@ sources:
     schema: SHOPKINS
     tables:
       - name: customers
-      - name: order_details
+      - name: orders_details
       - name: categories
       - name: employees
       - name: employee_territories
