@@ -6,5 +6,14 @@ sources:
     schema: SHOPKINS
     tables:
       - name: customers
+      - name: order_details
+      - name: categories
+      - name: employees
+      - name: employee_territories
       - name: orders
-      - name: payments
+      - name: products
+      - name: regions
+      - name: shippers
+      - name: suppliers
+      - name: territories
+
