@@ -11,7 +11,11 @@ with
 
  final as (
     select
-     * exclude(order_details.orderid)
+     orders.*
+     ,order_details.productid
+     ,order_details.quantity
+     ,order_details.unitprice
+     ,order_details.discount
     from orders left join order_details on orders.orderid = order_details.orderid
  )
 
