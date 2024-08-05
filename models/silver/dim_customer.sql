@@ -1,5 +1,5 @@
 select 
- md5(customerid)
+ md5(customerid) as dim_customer_key
  , CUSTOMERID
  , COMPANYNAME
  , CONTACTNAME
